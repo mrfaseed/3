@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat App</title>
+    <script>
+        // Function to detect if the user is on a mobile device
+        function redirectMobileUsers() {
+            const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+            if (isMobile) {
+                // Redirect to another page
+                window.location.href = 'https://mrfaseed.github.io/sorry'; // Replace with your target URL
+            }
+        }
+
+        // Call the function on page load
+        window.onload = redirectMobileUsers;
+    </script>
+    <style>
+        body, html {
+            user-select: none;
+            -webkit-user-select: none;
+            width: 100%;
+            height: 100%;
+            margin: 0; /* Ensure there's no margin */
+            display: flex; /* Make the body a flex container */
+            flex-direction: column; /* Stack children vertically */
+            justify-content: center; /* Center vertically */
+            align-items: center; /* Center horizontally */
+            text-align: center; /* Center the text within elements */
+        }
+
+        h1 {
+            color: #006915;
+            font-size: 4rem;
+        }
+
+        p {
+            font-size: 2rem;
+        }
+        
+        span {
+            color: rgba(17, 25, 40, 0.789);
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 3rem; /* Reduce the size of the heading on smaller screens */
+            }
+
+            p {
+                font-size: 1.5rem; /* Reduce the size of the paragraph on smaller screens */
+            }
+            span{
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2.5rem; /* Further reduce the heading size for mobile devices */
+            }
+
+            p {
+                font-size: 1.2rem; /* Further reduce the paragraph size for mobile devices */
+            }
+            span{
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Chat App</h1>
+    <p>We will update the app within this week. Thank you for your patience.</p>
+
+    <span> &copy; Powered by Codehub </span>
+</body>
+</html>
